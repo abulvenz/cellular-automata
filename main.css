@@ -1,0 +1,29 @@
+@import 'reset.css';
+td.alive {
+    background-color: green;
+}
+
+td.dead {
+    background-color: white;
+}
+
+td {
+    width: 1vw;
+    height: 1vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+table {
+    padding: 0px;
+    margin: 0px;
+}
+
+tr {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    overflow: hidden;
+}
