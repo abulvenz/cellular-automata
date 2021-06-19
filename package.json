@@ -1,0 +1,27 @@
+{
+  "name": "cellular-automata",
+  "version": "1.0.0",
+  "description": "",
+    "main": "index.html",
+    "dependencies": {
+    "reset.css": "^2.0.2",
+    "mithril": "^2.0.4",
+    "tagl-mithril": "^1.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+      "dist": "parcel build --public-url https://eismaenners.de/cells --dist-dir docs index.html",
+      "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abulvenz/cellular-automata.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abulvenz/cellular-automata/issues"
+  },
+  "homepage": "https://github.com/abulvenz/cellular-automata#readme"
+}
