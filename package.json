@@ -2,7 +2,6 @@
   "name": "cellular-automata",
   "version": "1.0.0",
   "description": "",
-    "main": "index.html",
     "dependencies": {
     "reset.css": "^2.0.2",
     "mithril": "^2.0.4",

@@ -64,7 +64,7 @@ const recorder = ((canvasid) => {
 
 let field = [];
 
-const N = 128;
+const N = 97;
 const M = 1;
 const L = 2;
 
@@ -141,7 +141,7 @@ const next = (row) => {
 const scale = 1;
 
 const width = innerWidth * scale;
-const height = innerHeight * scale;
+const height = innerHeight * scale * .9;
 
 const c = document.getElementById("board");
 c.width = width;
@@ -160,13 +160,9 @@ const draw = () => {
         row.forEach((col, ci) => {
 
             ctx.fillStyle = col === 1 ?
-                //            `rgb(${field[ci][ri]*155},${field[ci][ri]*155},${field[ri][ci]*255})`    
-                //`rgb(${field[ci][ri]*55},${field[ci][ri]*55},${field[ri][ci]*155})`
-                //`rgb(${max(0,255-2*index*55)},${(max(0,ci*2*55)%255)},${max(0,255-ri*155)})`
-                `rgb(${ri},${ci},${-index%255})`
-                //"black"
-                :
-                'black';
+                //`rgb(${random()*255},${random()*255},${random()*255})` 
+                "black" :
+                'white';
 
             ctx.fillRect(
                 width / field[0].length * ci + 0,
@@ -185,7 +181,6 @@ const run = () =>
         next(-index);
         draw();
         run();
-        m.redraw()
     });
 
 run();
@@ -198,7 +193,6 @@ m.mount(document.getElementById("rule"), {
                 recorder.vidURL() ? button({ onclick: e => recorder.clear() }, 'clear') : null,
             ]),
         recorder.vidURL() ? video({ controls: true, src: recorder.vidURL() }) : null,
-        JSON.stringify(rule), index
     ]
 });
 
